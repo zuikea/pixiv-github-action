@@ -22,6 +22,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        ref: runner # Change to your branch to place crawled pictures
     - name: Clear Previous
       run: |
         rm -f *.jpg
