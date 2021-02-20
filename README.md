@@ -1,5 +1,5 @@
 # Pixiv GitHub Action
-Crawls Pixiv daily rank list pictures every day
+Crawls Pixiv daily rank list pictures and pushes to a GitHub repository every day
 
 Usage: 
 1. Create a new branch place the crawled pictures
@@ -22,10 +22,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        ref: runner # Change to your branch to place crawled pictures
     - name: Clear Previous
       run: |
-        rm -f *.jpg
-        rm -f *.png
+        rm -f -- *.jpg
+        rm -f -- *.png
     - name: Setup Python environment
       uses: actions/setup-python@v1.1.1 
     - name: Install Dependence
