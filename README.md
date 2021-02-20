@@ -26,8 +26,8 @@ jobs:
         ref: runner # Change to your branch to place crawled pictures
     - name: Clear Previous
       run: |
-        rm -f *.jpg
-        rm -f *.png
+        rm -f -- *.jpg
+        rm -f -- *.png
     - name: Setup Python environment
       uses: actions/setup-python@v1.1.1 
     - name: Install Dependence
