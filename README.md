@@ -1,5 +1,5 @@
 # Pixiv GitHub Action
-Crawls Pixiv daily rank list pictures and push to GitHub repositories every day
+Crawls Pixiv daily rank list pictures and pushes to a GitHub repository every day
 
 Usage: 
 1. Create a new branch place the crawled pictures
