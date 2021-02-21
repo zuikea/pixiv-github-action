@@ -17,6 +17,8 @@ def getSinglePic(url):
     # 提取图片名称
     name = re.search('"illustTitle":"(.+?)"', response.text)
     name = name.group(1)
+    illust_id = re.search('"illustId":"(.+?)"', response.text)
+    illust_id = illust_id.group(1)
     if re.search('[\\\ \/ \* \? \" \: \< \> \|]', name) != None:
         name = re.sub('[\\\ \/ \* \? \" \: \< \> \|]', str(repeat), name)
         repeat += 1
