@@ -25,7 +25,7 @@ def getSinglePic(url):
     # 提取图片原图地址
     picture = re.search('"original":"(.+?)"},"tags"', response.text)
     pic = requests.get(picture.group(1), headers=headers)
-    f = open(path + '%s.%s' % (name, picture.group(1)[-3:]), 'wb')
+    f = open(path + '%s_%s.%s' % (illust_id, name, picture.group(1)[-3:]), 'wb')
     f.write(pic.content)
     f.close()
 
